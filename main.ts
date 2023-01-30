@@ -13,7 +13,7 @@ let Ties = 0
 let P2 = 0
 let P1 = 0
 OLED.init(128, 64)
-OLED.writeStringNewLine("Rock, Paper, Scissors counter")
+OLED.writeStringNewLine("\"Shall we play a game\"")
 P1 = 0
 P2 = 0
 Ties = 0
