@@ -2,13 +2,11 @@ input.onButtonPressed(Button.A, function () {
     basic.showString("A")
     P1 += 1
     Rounds += 1
-    Reset()
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showString("T")
     Ties += 1
     Rounds += 1
-    Reset()
 })
 function updatescores () {
     OLED.clear()
@@ -24,7 +22,6 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("B")
     P2 += 1
     Rounds += 1
-    Reset()
 })
 input.onGesture(Gesture.Shake, function () {
     Reset()
