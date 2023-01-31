@@ -8,15 +8,21 @@ function updatescores () {
     OLED.newLine()
     OLED.writeStringNewLine("Rounds:" + Rounds)
 }
+input.onGesture(Gesture.Shake, function () {
+    Reset()
+})
+function Reset () {
+    OLED.init(128, 64)
+    OLED.writeStringNewLine("Shall we play a game")
+    P1 = 0
+    P2 = 0
+    Ties = 0
+    Rounds = 0
+    basic.pause(2000)
+    updatescores()
+}
 let Rounds = 0
 let Ties = 0
 let P2 = 0
 let P1 = 0
-OLED.init(128, 64)
-OLED.writeStringNewLine("Shall we play a game")
-P1 = 0
-P2 = 0
-Ties = 0
-Rounds = 0
-basic.pause(2000)
-updatescores()
+Reset()
